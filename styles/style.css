@@ -92,8 +92,8 @@ hr {
 
 /* Course Styles */
 .courses {
-  display: grid;
   display: flex;
+  display: grid;
   justify-content: space-between;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 30px;
@@ -141,4 +141,48 @@ hr {
   border-radius: 15px;
   padding: 4px 8px;
   color: #ff4a60;
+}
+
+/**
+Media queries
+*/
+
+/* Tablet */
+
+@media (max-width: 688px) and (max-width: 992px) {
+  .container {
+    width: 100%;
+  }
+  .blogs,
+  .players {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .courses {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 688px) {
+  .container {
+    width: 100%;
+  }
+  .players,
+  .blogs,
+  .courses {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .section-title {
+    text-align: center;
+  }
+
+  .player,
+  .blog,
+  .course {
+    flex-direction: column;
+    align-items: center;
+  }
 }
